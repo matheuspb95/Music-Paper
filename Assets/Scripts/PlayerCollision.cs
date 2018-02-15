@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour {
 	PlayerCollectable collectable;
 	PlaneMovement movement;
 	public GameObject EndGameScreen;
+	public Text scoreTxt;
 	public MovingCity city;
 	public Transform camera;
 	bool cameraFollow;
@@ -43,9 +45,14 @@ public class PlayerCollision : MonoBehaviour {
 	}
 
 	public void GameOver(){
+		int hiscore = PlayerPrefs.GetInt("HiScore");
+		if(city.GetScore() > hiscore)
+			PlayerPrefs.SetInt("HiScore", city.GetScore());
 		city.CanCount = false;			
 		city.Velocity = 0;
 		EndGameScreen.SetActive(true);
+		scoreTxt.text = "Score     " + city.GetScore().ToString("000000")
+					  + "\n" + "Hi-Score " + hiscore.ToString("000000");
 		GetComponent<Rigidbody>().isKinematic = true;
 	}
 }

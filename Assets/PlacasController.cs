@@ -13,7 +13,7 @@ public class PlacasController : MonoBehaviour {
 	public float MaxY = 0.1f, MinY = 0.05f;
 	// Use this for initialization
 	void Start () {
-		dist = CitySize / Pieces;
+		dist = 0.0165f;
 	}
 	
 	// Update is called once per frame
@@ -28,16 +28,18 @@ public class PlacasController : MonoBehaviour {
 				GameObject newPlaca = Instantiate(LeftPieces[p]);
 				newPlaca.transform.parent = citypiece;
 				newPlaca.transform.localScale = LeftPieces[p].transform.localScale;
-				newPlaca.transform.localPosition = new Vector3(dist * i, 
-					Random.Range(MinY, MaxY), Random.Range(MinLeftPos, MaxLeftPos));
+				newPlaca.transform.localPosition = new Vector3(Random.Range(MinLeftPos, MaxLeftPos),
+														dist * i - 0.022f, 
+														Random.Range(MinY, MaxY));
 				newPlaca.transform.localRotation = LeftPieces[p].transform.rotation;
 			}else{
 				int p = Random.Range(0, RightPieces.Length);
 				GameObject newPlaca = Instantiate(RightPieces[p]);
 				newPlaca.transform.parent = citypiece;
 				newPlaca.transform.localScale = RightPieces[p].transform.localScale;
-				newPlaca.transform.localPosition = new Vector3(dist * i, 
-					Random.Range(MinY, MaxY), Random.Range(MinRightPos, MaxRightPos));
+				newPlaca.transform.localPosition = new Vector3(Random.Range(MinRightPos, MaxRightPos),
+														dist * i - 0.022f,
+														Random.Range(MinY, MaxY));
 				newPlaca.transform.localRotation = RightPieces[p].transform.rotation;
 			}
 		}

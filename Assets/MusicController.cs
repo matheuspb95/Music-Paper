@@ -13,10 +13,10 @@ public class MusicController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(player.position.y < 0){
-			volume = (5 + player.position.y) / 5;
+		//if(player.position.y < 0){
+			volume = (player.position.y + 5) / 10;
 			Music01.volume = volume;
 			Music02.volume = 1 - volume;
-		}
+		//}
 	}
 }

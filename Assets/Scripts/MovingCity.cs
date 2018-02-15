@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class MovingCity : MonoBehaviour {
 	public Rigidbody[] pieces;
 	
-	public Vector3 StartPoint, EndPoint;
+	public Vector3 StartPoint;
+	public float EndPoint;
 	public float Velocity;
 	public float Distance;
 	public Text score;
@@ -29,17 +30,22 @@ public class MovingCity : MonoBehaviour {
 		}
 		for(int i = 0; i < pieces.Length; i++){			
 			pieces[i].position -= Vector3.forward * Velocity * Time.fixedDeltaTime;
-			if(Vector3.Distance(pieces[i].position, EndPoint) < 0.01f){
+			if(pieces[i].position.z < EndPoint){
 				ResetPiece(i);
 			}
 		}
 	}
 
 	void ResetPiece(int i){
+		if(i == pieces.Length-1) Velocity++;
 		foreach (Transform child in pieces[i].transform) {
 			GameObject.Destroy(child.gameObject);
 		}
 		pieces[i].position = StartPoint;
 		placas.Generate(pieces[i].transform);
+	}
+
+	public int GetScore(){
+		return Mathf.CeilToInt(Distance);
 	}
 }

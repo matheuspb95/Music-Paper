@@ -44,7 +44,6 @@ public class PlayerCollectable : MonoBehaviour {
 	}
 
 	IEnumerator Up(){
-		
 		immune = true;
 		StartForce = player.DownVelocity;
 		t = 0;
