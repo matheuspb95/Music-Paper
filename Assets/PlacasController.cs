@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlacasController : MonoBehaviour {
 	public GameObject[] LeftPieces;
 	public GameObject[] RightPieces;
-
-	public float CitySize;
 	public int Pieces;
 	float dist;
 	public float MinLeftPos = 0.09f, MaxLeftPos = 0.11f, MinRightPos = 0.17f, MaxRightPos = 0.19f;
 	public float MaxY = 0.1f, MinY = 0.05f;
+	CarrosController carros;
 	// Use this for initialization
 	void Start () {
+		carros = GetComponent<CarrosController>();
 		dist = 0.0165f;
 	}
 	
@@ -43,5 +43,6 @@ public class PlacasController : MonoBehaviour {
 				newPlaca.transform.localRotation = RightPieces[p].transform.rotation;
 			}
 		}
+		carros.GenerateCars(citypiece);
 	}
 }

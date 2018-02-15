@@ -1535,7 +1535,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 556605957}
   m_LocalRotation: {x: 0.000000029802322, y: 0.7071068, z: 0.7071068, w: -0.000000029802322}
-  m_LocalPosition: {x: 13, y: -8, z: 86}
+  m_LocalPosition: {x: 13, y: -8, z: 83.9}
   m_LocalScale: {x: 690.8549, y: 690.8541, z: 690.85394}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1799,7 +1799,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 719881787}
   m_LocalRotation: {x: 0.000000029802322, y: 0.7071068, z: 0.7071068, w: -0.000000029802322}
-  m_LocalPosition: {x: 13, y: -8, z: 42}
+  m_LocalPosition: {x: 13, y: -8, z: 40}
   m_LocalScale: {x: 690.8549, y: 690.8541, z: 690.85394}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2808,7 +2808,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 950099325}
   m_LocalRotation: {x: 0.000000029802322, y: 0.7071068, z: 0.7071068, w: -0.000000029802322}
-  m_LocalPosition: {x: 13, y: -8, z: 130}
+  m_LocalPosition: {x: 13, y: -8, z: 127.8}
   m_LocalScale: {x: 690.8549, y: 690.8541, z: 690.85394}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3210,6 +3210,7 @@ GameObject:
   - component: {fileID: 1098998859}
   - component: {fileID: 1098998860}
   - component: {fileID: 1098998861}
+  - component: {fileID: 1098998862}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3234,8 +3235,8 @@ MonoBehaviour:
   - {fileID: 950099329}
   - {fileID: 1229888501}
   - {fileID: 1114476535}
-  StartPoint: {x: 13, y: -8, z: 204}
-  EndPoint: -14
+  StartPoint: {x: 13, y: -8, z: 199}
+  EndPoint: -20
   Velocity: 25
   Distance: 0
   score: {fileID: 1216593832}
@@ -3588,7 +3589,6 @@ MonoBehaviour:
   - {fileID: 1967551615425900, guid: 9dda9e9152606694587df86696f4dff1, type: 2}
   - {fileID: 1644521109793534, guid: 7c82f607d08ecc1469440b6269a0626b, type: 2}
   - {fileID: 1925890671061788, guid: ceed2797c3e0b90479d9d16eff0c0e47, type: 2}
-  CitySize: 0.45
   Pieces: 3
   MinLeftPos: 0.007
   MaxLeftPos: 0.013
@@ -3596,6 +3596,26 @@ MonoBehaviour:
   MaxRightPos: 0.032
   MaxY: 0
   MinY: 0.009
+--- !u!114 &1098998862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1098998849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6583d06cdc264484795ffb39857748fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cars:
+  - {fileID: 1815977767792396, guid: 6b6616b1d2db0634aa3107f7e9e9a9db, type: 2}
+  - {fileID: 1199234342697144, guid: f3809c4eb99a689498b92368af48821d, type: 2}
+  - {fileID: 1199234342697144, guid: f3809c4eb99a689498b92368af48821d, type: 2}
+  - {fileID: 1199234342697144, guid: f3809c4eb99a689498b92368af48821d, type: 2}
+  - {fileID: 1199234342697144, guid: f3809c4eb99a689498b92368af48821d, type: 2}
+  MaxPos: 0.013
+  MinPos: 0.026
+  NoChance: 0.4
 --- !u!1 &1114476531
 GameObject:
   m_ObjectHideFlags: 0
@@ -3621,7 +3641,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1114476531}
   m_LocalRotation: {x: 0.000000029802322, y: 0.7071068, z: 0.7071068, w: -0.000000029802322}
-  m_LocalPosition: {x: 13, y: -8, z: 218}
+  m_LocalPosition: {x: 13, y: -8, z: 215.6}
   m_LocalScale: {x: 690.8549, y: 690.8541, z: 690.85394}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4027,7 +4047,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1229888497}
   m_LocalRotation: {x: 0.000000029802322, y: 0.7071068, z: 0.7071068, w: -0.000000029802322}
-  m_LocalPosition: {x: 13, y: -8, z: 174}
+  m_LocalPosition: {x: 13, y: -8, z: 171.7}
   m_LocalScale: {x: 690.8549, y: 690.8541, z: 690.85394}
   m_Children: []
   m_Father: {fileID: 0}
